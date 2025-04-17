@@ -44,6 +44,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -53,6 +54,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
+  padding: 0;
+  width:100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -853,6 +859,8 @@ pre {
     margin-left: 83.33333%; }
   .offset-sm-11 {
     margin-left: 91.66667%; } }
+
+    
 
 @media (min-width: 768px) {
   .col-md {
@@ -9703,3 +9711,215 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+    /* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Center align all text */
+  body, .text, .heading-section, .resume-wrap, .about-info, .skill-mf,
+  .blog-entry .text, .contact-info .box {
+    text-align: center !important;
+  }
+  
+  /* Center the typing animation */
+  #typing-animation {
+    display: inline-block;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  /* Center profile image and details */
+  .about-img {
+    display: flex;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+  
+  .about-img img {
+    margin-left: 0 !important;
+  }
+  
+  /* Center the navbar items */
+  .navbar-nav {
+    align-items: center;
+  }
+  
+  /* Center project cards */
+  .blog-entry {
+    align-items: center;
+  }
+  
+  /* Center buttons */
+  .btn {
+    display: inline-block;
+    margin: 5px auto;
+  }
+  
+  /* Adjust hero section for mobile */
+  .hero .text {
+    padding: 0 15px;
+  }
+  
+  /* Center counters */
+  .counter-wrap {
+    justify-content: center;
+  }
+}
+
+
+
+
+/* Hero Section Mobile Fixes */
+@media (max-width: 767px) {
+  .hero {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .hero .text {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero .text span.subheading {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .hero .text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+  
+  .hero .text h1 span {
+    display: block;
+  }
+  
+  #typing-animation {
+    font-size: 18px;
+    white-space: normal;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  .hero .text h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .hero .btn {
+    display: inline-block;
+    width: auto;
+    margin: 5px 10px;
+    padding: 10px 20px;
+  }
+  
+  .slider-item .one-third {
+    display: none;
+  }
+}
+
+
+/* Global Mobile Styles */
+@media (max-width: 767px) {
+  /* Reset layout */
+  body, html {
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  /* Container padding */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    word-break: break-word;
+    line-height: 1.3;
+  }
+  
+  /* Spacing */
+  section {
+    padding: 40px 0;
+  }
+  
+  /* Force single column layout */
+  .col-md-6, .col-md-4, .col-lg-3 {
+    width: 100%;
+    float: none;
+  }
+  
+  /* Center all text */
+  .text-left, .text-right {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-mf .box-shadow-full {
+    padding: 20px;
+  }
+  
+  .about-img {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  
+  .about-info {
+    text-align: center;
+  }
+  
+  .skill-mf .progress {
+    margin: 10px auto;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .resume-wrap {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .big-4 {
+    font-size: 24px;
+  }
+  
+  #resume-section .btn {
+    margin: 20px auto;
+    display: block;
+    max-width: 250px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .blog-entry {
+    margin-bottom: 30px;
+  }
+  
+  .project-section .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .zoom-effect:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .contact-info .box {
+    margin-bottom: 20px;
+  }
+  
+  .contact-section .btn {
+    margin: 0 auto;
+    display: block;
+  }
+}
